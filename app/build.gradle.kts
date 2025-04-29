@@ -19,7 +19,6 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("boolean", "USE_LOCAL_DATA", "false")
     }
 
     buildTypes {
@@ -41,7 +40,6 @@ android {
     buildFeatures {
         viewBinding = true
         compose = true
-        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.10"
@@ -72,6 +70,7 @@ dependencies {
 
     // Retrofit
     implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging.interceptor)
     implementation(libs.retrofit)
